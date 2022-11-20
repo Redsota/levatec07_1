@@ -11,7 +11,7 @@ class Postcontroller extends Controller
 {
     public function index(Post $post)
     {
-        return view('posts/index')->with(['posts'=> $post->getPaginateByLimit()]);
+        return view('posts/index')->with(['posts'=> $post->getPaginateByLimit(1)]);
     }
     /**
  * 特定IDのpostを表示する
